@@ -9,7 +9,6 @@ This blog is built with NextJS and complimented by a Wordpress backend.
 - [Custom Server](#custom-server)
 - [Syntax Highlighting](#syntax-highlighting)
 - [Deploy to Now](#deploy-to-now)
-- [Something Missing?](#something-missing)
 
 ## Available Scripts
 
@@ -97,7 +96,3 @@ To configure the syntax highlighting in your favorite text editor, head to the [
     Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
 You can find more details about [`now` here](https://zeit.co/now).
-
-## Something Missing?
-
-If you have ideas for how we could improve this readme or the project in general, [let us know](https://github.com/segmentio/create-next-app/issues) or [contribute some!](https://github.com/segmentio/create-next-app/edit/master/lib/templates/default/README.md)
