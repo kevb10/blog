@@ -10,7 +10,8 @@ const Foot = () => (
     </div>
     <style jsx>{`
       .footer {
-        position: absolute;
+        position: relative;
+        margin-top: 50px;
         bottom: 0;
         width: 100%;
         height: 60px;
