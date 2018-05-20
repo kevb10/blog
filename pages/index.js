@@ -3,16 +3,17 @@ import Layout from '../components/layout'
 
 const Index = () => (
   <Layout>
-    <div>
-      <div className="hero">
-        <h1 className="title">Welcome to Next!</h1>
-        <p className="description">To get started, edit <code>pages/index.js</code> and save to reload.</p>
+    <div className="container">
+      <div>
+        <h1 className="title">Welcome</h1>
+        <p className="description">Watch me as I build a little blogging space.</p>
 
         <div className="row">
-          <Link href="https://github.com/zeit/next.js#getting-started">
+          <Link href="#">
             <a className="card">
-              <h3>Getting Started &rarr;</h3>
-              <p>Learn more about Next on Github and in their examples</p>
+              <h3>Blog Title &rarr;</h3>
+              <p>This is a little preview of the blog. This shouldn't be more than
+              a cerntain number of characters.</p>
             </a>
           </Link>
           <Link href="https://open.segment.com/create-next-app">
@@ -33,9 +34,8 @@ const Index = () => (
       </div>
 
       <style jsx>{`
-        .hero {
-          width: 100%;
-          color: #333;
+        .container {
+          height: 100%;
         }
         .title {
           margin: 0;
@@ -48,22 +48,24 @@ const Index = () => (
           text-align: center;
         }
         .row {
-          max-width: 880px;
-          margin: 80px auto 40px;
+          width: 70%;
+          margin-top: 50px;
+          margin-right: auto;
+          margin-left: auto;
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: space-around;
         }
         .card {
           padding: 18px 18px 24px;
-          width: 220px;
+          width: 100%;
           text-align: left;
           text-decoration: none;
           color: #434343;
-          border: 1px solid #9B9B9B;
+          border: 1px solid #fff;
         }
         .card:hover {
-          border-color: #067df7;
+          border: 1px solid #067df7;
         }
         .card h3 {
           margin: 0;
