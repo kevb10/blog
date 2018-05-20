@@ -1,5 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
+import Head from './head'
+import Nav from './nav'
+import Foot from './foot'
+import globalStyles from '../static/stylesheet/main.css'
 
 const withLayout = (WrappedComponent) => {
   class WithLayout extends React.Component {
@@ -15,22 +18,23 @@ const withLayout = (WrappedComponent) => {
       const { props } = this;
 
       return (
-        <div>
+      <html>            
+        <Head title="Home" />
+        <style jsx global>
+            {globalStyles}
+        </style>
+        <body>
           <header>
-            <nav>
-              <ul>
-                <li><Link href="/"><a>home</a></Link></li>
-                <li><Link href="/blog"><a>blog</a></Link></li>
-              </ul>
-            </nav>
+            <Nav />
           </header>
-          <main>
-            <WrappedComponent {...props} />
-          </main>
+          <div className="container">
+            <WrappedComponent  { ...props } />
+          </div>
           <footer>
-            this is the footer
+            <Foot />
           </footer>
-        </div>
+        </body>
+      </html>
       );
     }
   }
