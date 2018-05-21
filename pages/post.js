@@ -1,7 +1,8 @@
 import {Component} from 'react'
-import Link from 'next/link';
-import api from '../api';
+import Link from 'next/link'
+import api from '../api'
 import withLayout from "../components/withLayout"
+import Moment from 'react-moment'
 
 class BlogPost extends Component {
   static async getInitialProps({ query: { slug } }) {
@@ -13,10 +14,14 @@ class BlogPost extends Component {
     const { post } = this.props;
 
     return (
-      <div className="row">
+      <div className="row language-vim">
+        <script src="../static/js/prism.js"></script>
           <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-          <p>{post.date}</p>
-          <p>By {post._embedded.author[0].name}</p>
+          <p className="timeStamp">
+            <Moment format="MM/DD/YYYY">
+              {post.date}
+            </Moment>
+          </p>
           {
           !!post._embedded['wp:featured_media'] &&
           <img

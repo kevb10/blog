@@ -32,14 +32,14 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-nav > ul {
+nav ul {
   padding: 4px 16px;
 }
-li {
+nav li {
   display: flex;
   padding: 6px 8px;
 }
-a {
+nav a {
   color: #067df7;
   text-decoration: none;
   font-size: 13px;
@@ -50,6 +50,12 @@ a {
 ***************************************/
 .container {
   height: 100%;
+}
+
+.container li {
+  margin-left: 10px;
+  list-style-type: circle;
+  display: list-item !important;
 }
 
 .row {
@@ -82,6 +88,55 @@ a {
   padding: 12px 0 0;
   font-size: 13px;
   color: #333;
+}
+
+/**************************************
+* CONTENT
+***************************************/
+.timeStamp {
+  margin-top: -20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #8c8c8c;
+}
+
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 30px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+  display: inline;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  padding: 20px;
+	font-size: 12px;
+	line-height: 20px;
+  background: green;
+  color: #fff;
+	border: 3px solid black;
 }
 
 /**************************************

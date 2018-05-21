@@ -2,6 +2,8 @@ import {Component} from 'react'
 import Link from 'next/link'
 import api from '../api'
 import withLayout from '../components/withLayout'
+import Moment from 'react-moment'
+
 
 class Index extends Component {
   static async getInitialProps() {
@@ -15,13 +17,13 @@ class Index extends Component {
     return (        
       <div>
         <h1 className="title">Welcome</h1>
-        <p className="description">Watch me as I build a little blogging space.</p>
+        <p className="description">Follow along as I build a little blogging space from scratch.</p>
           {
             posts.map( post => (
               <div className="row">
                 <Link
                     href={{
-                      pathname: '/blogpost',
+                      pathname: '/post',
                       query: {
                         slug: post.slug,
                       },
@@ -29,7 +31,11 @@ class Index extends Component {
                   >
                   <a className="card">
                     <h3 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                    <p>{post.date}</p>
+                    <p className="timeStamp">
+                      <Moment format="MM/DD/YYYY">
+                        {post.date}
+                      </Moment>
+                    </p>
                     <p dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
                   </a>
                 </Link>
