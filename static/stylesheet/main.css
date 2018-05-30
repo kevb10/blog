@@ -2,6 +2,11 @@
 /**************************************
 * MAIN
 ***************************************/
+html, head, body {
+  margin: 0 auto;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
@@ -10,6 +15,13 @@ body {
 /**************************************
 * HEADER
 ***************************************/
+header {
+  background-color: #000;
+  height: 60px;
+  vertical-align: middle;
+  margin-top: -20px;
+}
+
 .title {
   margin: 0;
   width: 100%;
@@ -40,9 +52,10 @@ nav li {
   padding: 6px 8px;
 }
 nav a {
-  color: #067df7;
-  text-decoration: none;
+  color: #fff !important;
+  text-decoration: underline;
   font-size: 13px;
+  font-weight: 700;
 }
 
 /**************************************
